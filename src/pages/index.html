@@ -1,3 +1,68 @@
 ---
-slogan: A new experience everyday!
+title: homepage
+slogan: Enjoy a Delicious Cup of Coffee
 ---
+
+<div class="container">
+  <main class="main-content page--title">
+    <div class="about-us-homepage">
+      <h2 class="heading-title">Learn more
+      <span>About Us</span></h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quia quis eaque error, blanditiis, fuga dolorum quae quo expedita, dolorem beatae tempore, blanditiis, fuga dolorum quae quo expedita, dolorem beatae tempore, voluptatum suscipit tenetur nihil quas perspiciatis. Quas, pariatur?</p>
+      <div class="category-icons">
+        <div class="icon coffee">
+          <h3>Coffee</h3>
+        </div>
+        <div class="icon dessert">
+          <h3>Desserts</h3>
+        </div>
+        <div class="icon tea">
+          <h3>Tea</h3>
+        </div>
+      </div>
+    </div> <!-- .about-us-homepage -->
+  </main>
+</div>
+
+<div class="container">
+  <div class="main-content page-{{title}}">
+    {{> our_gallery}}
+  </div>
+</div>
+
+{{> our_menu}}
+
+<div class="container testimonials">
+  <h2 class="heading-title">What Our Clients Say
+      <span>testimonials</span></h2>
+  <div class="slide-container">
+    <div class="orbit" role="region" aria-label="Our Testimonials" data-orbit>
+      <div class="orbit-wrapper">
+        <div class="orbit-controls">
+          <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+          <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+        </div> <!-- .orbit-controls -->
+        <ul class="orbit-container">
+          <li class="is-active orbit-slide">
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, rem odit. Suscipit iusto itaque, vero aliquam delectus non, repellat expedita optio fugit omnis dolor facere ipsa quae ipsum fugiat voluptatem.</p>
+              <h3>- Ryan Johnson</h3>
+            </div>
+          </li>
+          <li class="orbit-slide">
+            <div>
+              <p>Amet consectetur adipisicing elit. Nisi, rem odit. Suscipit iusto itaque, vero aliquam delectus non, repellat expedita optio fugit omnis dolor facere ipsa quae ipsum fugiat voluptatem.</p>
+              <h3>- El Bufalo</h3>
+            </div>
+          </li>
+          <li class="orbit-slide">
+            <div>
+              <p>Suscipit iusto itaque, vero aliquam delectus non, repellat expedita optio fugit omnis dolor facere ipsa quae ipsum fugiat voluptatem.</p>
+              <h3>- That Guy</h3>
+            </div>
+          </li>
+        </ul>
+      </div> <!-- .orbit-wrapper -->
+    </div> <!-- .orbit -->
+  </div>
+</div>

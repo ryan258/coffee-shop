@@ -1,0 +1,14 @@
+.slide-container {
+  @include xy-grid();
+  @include flex-align(center, middle);
+  .orbit {
+    background-color: $cream;
+    @include xy-cell(10);
+    border-left: rem-calc(5) solid $primary-color;
+    li {
+      div {
+        @include padding(2, 4, 2, 4);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.our-menu {
+  background-image: url(../img/menu.jpg);
+  @include padding(3, null, 3, null);
+  // height: rem-calc(600);
+  @include position(relative);
+  background-position: center center;
+  // scroll is a fix for iOS devices
+  background-attachment: scroll;
+  @include breakpoint(large) {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  h2 {
+    color: $white;
+    @include font-bold(900);
+    @include text-transform(uppercase);
+    text-align: center;
+    font-size: rem-calc(20);
+    margin-bottom: rem-calc(40);
+    span {
+      @include display(table);
+      margin: 0 auto;
+      font-size: rem-calc(30);
+    }
+  }
+  &:after {
+    content: '';
+    @include position(absolute, 0, 0, 0, 0);
+    background-color: rgba(46, 23, 15, .86);
+  }
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+  .menu-list {
+    @include xy-grid();
+    color: $white;
+    > div {
+      @include xy-cell();
+      @include breakpoint(medium) {
+        @include xy-cell(6);
+      }
+      h3 {
+        @include text-transform(uppercase);
+        @include font-bold(900);
+        text-align: center;
+        margin-bottom: rem-calc(40);
+      }
+    }
+  }
+}

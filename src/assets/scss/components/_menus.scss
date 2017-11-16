@@ -1,0 +1,69 @@
+.menus {
+  @include xy-cell();
+  @include breakpoint(medium) {
+    @include xy-cell(75%);
+  }
+
+  // social-menu
+  .social-menu {
+    @include menu-base();
+    @include flex-align(center, middle);
+    @include breakpoint(medium) {
+      @include flex-align(right, middle);
+    }
+    a {
+      &:before {
+        display: inline-block;
+        font-family: 'Fontawesome';
+        font-size: rem-calc(30);
+        color: $white;
+        -webkit-font-smoothing: antialiased;
+        content: '\f08e';
+      }
+      &[href*="facebook.com"]::before { content: '\f082'; }
+      &[href*="twitter.com"]::before { content: '\f099'; }
+      &[href*="instagram.com"]::before { content: '\f16d'; }
+      &[href*="youtube.com"]::before { content: '\f16a'; }
+    }
+  }
+
+  .title-bar {
+    background-color: darken($primary-color, 10);
+  }
+
+  // Main Navigation for Interior pages
+  .main-navigation {
+    // make it like a menu
+    @include menu-base();
+    @include flex-align(right, middle);
+    @include breakpoint(small only) {
+      background-color: $primary-color;
+    }
+    li {
+      @include breakpoint(small only) {
+        width: 100%;
+        text-align: center;
+      }
+
+      a {
+        @include text-transform(uppercase);
+        @include font-bold(700);
+        font-size: rem-calc(16);
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+// Animation Menus
+//// See the motionUI Library
+.menu-in {
+  @include mui-fade(in, .1, 1);
+}
+
+.menu-out {
+  @include mui-zoom(out, 1, .1, true, .5s, ease);
+}

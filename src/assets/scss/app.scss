@@ -53,5 +53,16 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import 'components/motion-ui';
+
+@import 'components/fonts';
 @import 'fontawesome/font-awesome';
+@import 'mixins';
+@import 'components/site-header';
+@import 'components/menus';
+@import 'components/heading-title';
+@import 'components/site-footer';
+@import 'components/orbit';
+@import 'components/our-gallery';
+@import 'components/our-menu';
 @import 'custom';

@@ -1,0 +1,9 @@
+// Animation - motionUI Library
+
+.reveal-in {
+  @include mui-slide();
+}
+
+.reveal-out {
+  @include mui-slide(out, left, 100%, fade);  
+}

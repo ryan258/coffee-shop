@@ -1,0 +1,15 @@
+// Fade effect mixin
+@mixin faded_black() {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0.3) );
+}
+
+// Background images for different screen sizes.
+@mixin background_image($page) {
+  background-image: url(../img/featured/small/#{$page}.jpg);
+  @include breakpoint(medium) {
+    background-image: url(../img/featured/medium/#{$page}.jpg);
+  }
+  @include breakpoint(large) {
+    background-image: url(../img/featured/large/#{$page}.jpg);
+  }
+}
